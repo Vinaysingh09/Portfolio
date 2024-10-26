@@ -1,78 +1,52 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advanced Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Dark Mode Toggle Button -->
-  <div class="toggle-switch">
-    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-  </div>
-
-  <!-- Navigation Bar -->
-  <nav>
-    <ul>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- About Section -->
-  <section id="about" class="section fade-in">
-    <h1>About Me</h1>
-    <p>I'm a passionate software developer with a focus on building scalable and efficient applications.</p>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="section fade-in">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-card">Java</div>
-      <div class="skill-card">Spring Boot</div>
-      <div class="skill-card">JDBC</div>
-      <div class="skill-card">HTML</div>
-      <div class="skill-card">CSS</div>
-      <div class="skill-card">JavaScript</div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section fade-in">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Project 1</h3>
-      <p>Brief description of Project 1 with key technologies used.</p>
-      <a href="https://github.com/project1" target="_blank">GitHub Repo</a>
-    </div>
-    <!-- Repeat for more projects -->
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="section fade-in">
-    <h2>Experience</h2>
-    <ul>
-      <li><strong>Software Developer</strong> - Company Name (2021 - Present)</li>
-      <!-- Add more roles as needed -->
-    </ul>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section fade-in">
-    <h2>Contact</h2>
-    <form id="contactForm">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <script src="script.js"></script>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Backend Developer specializing in Java, Spring Boot, and more.</p>
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a backend developer with experience in building robust applications using Java, Spring Boot, HTML, CSS, and JavaScript.</p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Java</li>
+            <li>Spring Boot</li>
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>RESTful APIs</li>
+            <li>SQL Databases</li>
+        </ul>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Bobby Lotto</h3>
+            <p>A lottery-based project showcasing backend logic and user management.</p>
+        </div>
+        <div class="project">
+            <h3>LottoManis</h3>
+            <p>A lottery application with complex business logic, built with Spring Boot.</p>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out through email for any inquiries or collaboration opportunities.</p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
 </body>
 </html>
