@@ -3,10 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="Style.css">
+  <title>Advanced Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Dark Mode Toggle Button -->
+  <div class="toggle-switch">
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </div>
+
   <!-- Navigation Bar -->
   <nav>
     <ul>
@@ -18,14 +23,14 @@
     </ul>
   </nav>
 
-  <!-- About Me Section -->
-  <section id="about">
+  <!-- About Section -->
+  <section id="about" class="section fade-in">
     <h1>About Me</h1>
-    <p>Hello! I'm a software developer passionate about building efficient and scalable applications.</p>
+    <p>I'm a passionate software developer with a focus on building scalable and efficient applications.</p>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills">
+  <section id="skills" class="section fade-in">
     <h2>Skills</h2>
     <div class="skills-grid">
       <div class="skill-card">Java</div>
@@ -38,28 +43,27 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects">
+  <section id="projects" class="section fade-in">
     <h2>Projects</h2>
     <div class="project">
       <h3>Project 1</h3>
-      <p>Description of Project 1</p>
+      <p>Brief description of Project 1 with key technologies used.</p>
       <a href="https://github.com/project1" target="_blank">GitHub Repo</a>
     </div>
     <!-- Repeat for more projects -->
   </section>
 
   <!-- Experience Section -->
-  <section id="experience">
+  <section id="experience" class="section fade-in">
     <h2>Experience</h2>
     <ul>
       <li><strong>Software Developer</strong> - Company Name (2021 - Present)</li>
-      <li><strong>Junior Developer</strong> - Company Name (2019 - 2021)</li>
-      <!-- Repeat for more roles -->
+      <!-- Add more roles as needed -->
     </ul>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact">
+  <section id="contact" class="section fade-in">
     <h2>Contact</h2>
     <form id="contactForm">
       <input type="text" name="name" placeholder="Your Name" required>
@@ -71,4 +75,4 @@
 
   <script src="script.js"></script>
 </body>
-  </html>
+</html>
