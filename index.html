@@ -1,52 +1,80 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backend Developer Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Portfolio - Simon Doe</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p>Backend Developer specializing in Java, Spring Boot, and more.</p>
-    </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a backend developer with experience in building robust applications using Java, Spring Boot, HTML, CSS, and JavaScript.</p>
-    </section>
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Java</li>
-            <li>Spring Boot</li>
-            <li>HTML & CSS</li>
-            <li>JavaScript</li>
-            <li>RESTful APIs</li>
-            <li>SQL Databases</li>
-        </ul>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Bobby Lotto</h3>
-            <p>A lottery-based project showcasing backend logic and user management.</p>
+    <div class="sidebar">
+        <div class="profile">
+            <img src="profile.jpg" alt="Simon Doe" class="profile-pic">
+            <h1>Simon Doe</h1>
+            <p>Senior Software Engineer</p>
+            <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
         </div>
-        <div class="project">
-            <h3>LottoManis</h3>
-            <p>A lottery application with complex business logic, built with Spring Boot.</p>
+        <nav>
+            <ul id="menu">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </nav>
+    </div>
+
+    <main>
+        <section class="hero" id="about">
+            <h2>Simon Doe</h2>
+            <h3>Senior Software Engineer</h3>
+            <p>I specialize in frontend and backend development for complex scalable web apps.</p>
+        </section>
+
+        <section class="portfolio" id="portfolio">
+            <h2>My Portfolio</h2>
+            <div class="portfolio-gallery">
+                <div class="portfolio-item" onclick="showProjectDetails('project1')">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Project 1</h3>
+                </div>
+                <div class="portfolio-item" onclick="showProjectDetails('project2')">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Project 2</h3>
+                </div>
+                <div class="portfolio-item" onclick="showProjectDetails('project3')">
+                    <img src="project3.jpg" alt="Project 3">
+                    <h3>Project 3</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Modal for Project Details -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="projectTitle">Project Title</h3>
+            <p id="projectDescription">Project details go here.</p>
         </div>
-    </section>
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out through email for any inquiries or collaboration opportunities.</p>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Simon Doe. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
