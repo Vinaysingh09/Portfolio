@@ -1,34 +1,50 @@
-// Dark Mode Toggle
+// Toggle Dark Mode
 function toggleDarkMode() {
-  document.body.classList.toggle('dark-mode');
+    document.body.classList.toggle("dark-mode");
 }
 
-// Smooth Scrolling for Navigation Links
-document.querySelectorAll('nav a').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
+// Responsive Menu Toggle
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("show");
+}
+
+// Show Project Details in Modal
+function showProjectDetails(projectId) {
+    const modal = document.getElementById("projectModal");
+    const projectTitle = document.getElementById("projectTitle");
+    const projectDescription = document.getElementById("projectDescription");
+
+    // Sample data for demonstration
+    const projects = {
+        project1: {
+            title: "Project 1",
+            description: "Details about Project 1.",
+        },
+        project2: {
+            title: "Project 2",
+            description: "Details about Project 2.",
+        },
+        project3: {
+            title: "Project 3",
+            description: "Details about Project 3.",
+        },
+    };
+
+    projectTitle.textContent = projects[projectId].title;
+    projectDescription.textContent = projects[projectId].description;
+
+    modal.style.display = "flex";
+}
+
+// Close Modal
+function closeModal() {
+    const modal = document.getElementById("projectModal");
+    modal.style.display = "none";
+}
+
+// Contact Form Submission
+document.getElementById("contactForm").addEventListener("submit", (e) => {
     e.preventDefault();
-    const targetSection = document.querySelector(this.getAttribute('href'));
-    targetSection.scrollIntoView({ behavior: 'smooth' });
-  });
-});
-
-// Fade-in Animation on Scroll
-const fadeElements = document.querySelectorAll('.fade-in');
-
-const handleScroll = () => {
-  fadeElements.forEach(element => {
-    const rect = element.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 50) {
-      element.classList.add('visible');
-    }
-  });
-};
-
-window.addEventListener('scroll', handleScroll);
-window.addEventListener('load', handleScroll);
-
-// Contact Form Handling (placeholder for real functionality)
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  alert('Thank you for reaching out! Your message has been sent.');
+    alert("Thank you for reaching out!");
 });
