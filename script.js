@@ -1,50 +1,11 @@
-// Toggle Dark Mode
-function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-}
+// Simple form submission handling
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
 
-// Responsive Menu Toggle
-function toggleMenu() {
-    const menu = document.getElementById("menu");
-    menu.classList.toggle("show");
-}
-
-// Show Project Details in Modal
-function showProjectDetails(projectId) {
-    const modal = document.getElementById("projectModal");
-    const projectTitle = document.getElementById("projectTitle");
-    const projectDescription = document.getElementById("projectDescription");
-
-    // Sample data for demonstration
-    const projects = {
-        project1: {
-            title: "Project 1",
-            description: "Details about Project 1.",
-        },
-        project2: {
-            title: "Project 2",
-            description: "Details about Project 2.",
-        },
-        project3: {
-            title: "Project 3",
-            description: "Details about Project 3.",
-        },
-    };
-
-    projectTitle.textContent = projects[projectId].title;
-    projectDescription.textContent = projects[projectId].description;
-
-    modal.style.display = "flex";
-}
-
-// Close Modal
-function closeModal() {
-    const modal = document.getElementById("projectModal");
-    modal.style.display = "none";
-}
-
-// Contact Form Submission
-document.getElementById("contactForm").addEventListener("submit", (e) => {
-    e.preventDefault();
-    alert("Thank you for reaching out!");
+  // You can add your logic here to handle the form submission (e.g., send data to a server)
+  console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+  alert('Thank you for your message! I will get back to you soon.');
 });
