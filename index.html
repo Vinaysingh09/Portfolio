@@ -1,80 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Simon Doe</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backend Developer Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="sidebar">
-        <div class="profile">
-            <img src="profile.jpg" alt="Simon Doe" class="profile-pic">
-            <h1>Simon Doe</h1>
-            <p>Senior Software Engineer</p>
-            <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-        </div>
-        <nav>
-            <ul id="menu">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-        </nav>
+  <header>
+    <div class="container">
+      <h1>John Doe</h1>
+      <p>Backend Developer | Java | Spring Boot | Microservices | MySQL</p>
     </div>
+  </header>
 
-    <main>
-        <section class="hero" id="about">
-            <h2>Simon Doe</h2>
-            <h3>Senior Software Engineer</h3>
-            <p>I specialize in frontend and backend development for complex scalable web apps.</p>
-        </section>
-
-        <section class="portfolio" id="portfolio">
-            <h2>My Portfolio</h2>
-            <div class="portfolio-gallery">
-                <div class="portfolio-item" onclick="showProjectDetails('project1')">
-                    <img src="project1.jpg" alt="Project 1">
-                    <h3>Project 1</h3>
-                </div>
-                <div class="portfolio-item" onclick="showProjectDetails('project2')">
-                    <img src="project2.jpg" alt="Project 2">
-                    <h3>Project 2</h3>
-                </div>
-                <div class="portfolio-item" onclick="showProjectDetails('project3')">
-                    <img src="project3.jpg" alt="Project 3">
-                    <h3>Project 3</h3>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact" id="contact">
-            <h2>Contact Me</h2>
-            <form id="contactForm">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    </main>
-
-    <!-- Modal for Project Details -->
-    <div class="modal" id="projectModal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h3 id="projectTitle">Project Title</h3>
-            <p id="projectDescription">Project details go here.</p>
-        </div>
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I am a passionate backend developer with expertise in Java, Spring Boot, MySQL, and microservices architecture. 
+        I have experience building scalable and efficient backend systems for web applications. 
+        I love solving complex problems and delivering high-quality software solutions.
+      </p>
     </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2024 Simon Doe. All rights reserved.</p>
-    </footer>
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul>
+        <li>Java</li>
+        <li>Spring Boot</li>
+        <li>MySQL</li>
+        <li>Microservices</li>
+        <li>RESTful APIs</li>
+        <li>Docker</li>
+        <li>Git</li>
+      </ul>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>E-Commerce Backend System</h3>
+        <p>
+          Developed a scalable e-commerce backend using Spring Boot and MySQL. 
+          Implemented microservices for product management, order processing, and user authentication.
+        </p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+      <div class="project">
+        <h3>Online Banking System</h3>
+        <p>
+          Built a secure online banking system with RESTful APIs for account management, 
+          transaction processing, and fraud detection using Java and Spring Boot.
+        </p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+      <div class="project">
+        <h3>Task Management API</h3>
+        <p>
+          Created a task management API with user authentication, task creation, 
+          and status tracking using microservices architecture.
+        </p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 John Doe. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
