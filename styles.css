@@ -4,113 +4,176 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
   color: #333;
+  background-color: #f4f4f4;
 }
 
 .container {
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+h1, h2, h3 {
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
 header {
   background: #333;
   color: #fff;
-  padding-top: 30px;
-  min-height: 70px;
-  border-bottom: #77aaff 3px solid;
+  padding: 20px 0;
+  text-align: center;
 }
 
 header h1 {
-  text-align: center;
   margin: 0;
-  font-size: 36px;
+  font-size: 2.5rem;
 }
 
 header p {
-  text-align: center;
-  font-size: 18px;
+  margin: 5px 0 0;
+  font-size: 1.2rem;
 }
 
-/* Sections */
-section {
-  padding: 20px 0;
-}
-
-section h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 28px;
-}
-
-section p, section ul {
-  font-size: 18px;
-}
-
-section ul {
-  list-style-type: none;
+header nav ul {
+  list-style: none;
   padding: 0;
+  margin: 20px 0 0;
 }
 
-section ul li {
-  background: #77aaff;
+header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+header nav ul li a {
   color: #fff;
-  padding: 10px;
-  margin-bottom: 5px;
-  border-radius: 5px;
+  font-weight: bold;
 }
 
-/* Projects */
-.project {
+/* About Section */
+.about {
+  padding: 50px 0;
+  background: #fff;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Skills Section */
+.skills {
+  padding: 50px 0;
+  background: #f4f4f4;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.skill {
   background: #fff;
   padding: 20px;
-  margin-bottom: 20px;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.project h3 {
-  margin-top: 0;
+.progress-bar {
+  background: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 10px;
+  margin-top: 10px;
 }
 
-.btn {
+.progress {
+  background: #007BFF;
+  height: 100%;
+}
+
+/* Projects Section */
+.projects {
+  padding: 50px 0;
+  background: #fff;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project a {
   display: inline-block;
-  background: #333;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
+  margin-top: 10px;
+  color: #007BFF;
 }
 
-.btn:hover {
-  background: #77aaff;
+/* Contact Section */
+.contact {
+  padding: 50px 0;
+  background: #f4f4f4;
 }
 
-/* Contact Form */
-form {
+#contact-form {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
-form input, form textarea {
-  margin-bottom: 10px;
+#contact-form input, #contact-form textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-form button {
-  background: #333;
+#contact-form button {
+  padding: 10px;
+  background: #007BFF;
   color: #fff;
   border: none;
-  padding: 10px;
   border-radius: 5px;
   cursor: pointer;
 }
 
-form button:hover {
-  background: #77aaff;
+#contact-form button:hover {
+  background: #0056b3;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin-right: 15px;
 }
 
 /* Footer */
@@ -119,5 +182,5 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px 0;
-  margin-top: 20px;
+  margin-top: 50px;
 }
